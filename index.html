@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- Search bar -->
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Search by product name/id">
+        <button onclick="searchProduct()">Search</button>
+    </div>
+
+    <!-- Search result container -->
+    <div id="search-result"></div>
+
+    <!-- Product list -->
+    <div id="product-list">
+        <div class="product" id="data-1">
+            <h3>Product Name: <span>Laptop</span></h3>
+            <img src="./images/image copy 2.png" class="product-img" onclick="showProductDetails(1)">
+            <p>Price: $10200</p>
+            <button id="adding" onclick="addCart(1)">Add Cart</button>
+        </div>
+        <div class="product" id="data-2">
+            <h3>Product Name: <span>SmartPhone</span></h3>
+            <img src="./images/image copy.png" class="product-img" onclick="showProductDetails(2)">
+            <p>Price: $12000</p>
+            <button  id="adding"onclick="addCart(2)">Add Cart</button>
+        </div>
+        <div class="product" id="data-3">
+            <h3>Product Name: <span>BlueTooth</span></h3>
+            <img src="./images/image.png" class="product-img" onclick="showProductDetails(3)">
+            <p>Price: $1200</p>
+            <button  id="adding" onclick="addCart(3)">Add Cart</button>
+        </div>
+    </div>
+
+    <!-- Modal for product details -->
+    <div id="product-details-modal" style="display: none;">
+        <div class="product-details">
+            <h3 id="product-name"></h3>
+            <img id="product-image" src="" alt="Product Image" class="product-img">
+            <p id="product-price"></p>
+            <p id="product-description">Description: A great product with amazing features.</p>
+            <button id="add-to-cart-details">Add to Cart</button>
+            <button onclick="closeProductDetails()">Close</button>
+        </div>
+    </div>
+
+    <!-- Cart section -->
+    <div id="cart-container">
+        <h2>Shopping Cart</h2>
+        <div id="cart-items"></div>
+        <h3>Total: $<span id="total-price">0</span></h3>
+    </div>
+
+    <!-- Linking JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
